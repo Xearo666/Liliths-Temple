@@ -62,22 +62,180 @@
       </div>
     </section>
 
-    <!-- MANIFEST -->
-    <section id="manifest" aria-label="Manifest Liliths Temple">
-      <div class="wrap">
-        <div class="card reveal">
-          <span class="tag">Manifest</span>
-          <h2>Tantra — sztuka świadomego istnienia</h2>
-          <p>Tantra to nie zabawa orgazmem, ani powierzchowny rytuał. To odważne eksperymentowanie z własną świadomością i pełna integracja z ciałem. To obecność — w oddechu, geście, spojrzeniu, dotyku.</p>
-          <p>Masaż tantryczny nie jest zabawką do „osiągania szczytów”, lecz <strong>dojrzałym procesem uświadamiania i odkrywania</strong> — poznawaniem granic, uczeniem się od siebie i od drugiego człowieka. Zmysły nie służą tu igraszce, lecz stają się instrumentem, który stroimy, by odzyskać żywotność i sprawczość.</p>
-          <p class="quote">„W tantrze seksualność nie jest tabu. Jest częścią człowieczeństwa — świętą, naturalną i odpowiedzialną.”</p>
-          <p>Przyjemność — użyta świadomie — staje się lekarstwem. Chroni, reguluje, otwiera. To alternatywna medycyna, o ile praktykujemy ją z uważnością i szacunkiem do granic: swoich i cudzych.</p>
-          <p>Tantra uczy harmonii między <em>dzikością</em> a <em>roztropnością</em>. Nie nadużywa i nie bagatelizuje. Czci wszystko, co ludzkie — nasze popędy, potrzeby, braki i blokady — bo dopiero ich urzeczywistnienie prowadzi do <strong>prawdziwego spełnienia</strong>, a nie krótkiego zaspokojenia.</p>
-          <p>Przebudzenie zaczyna się w głowie. Kiedy serce się otwiera, świadomość przenika ciało; rozprasza wstyd, lęk i porywczość. W tej transparentności możliwy jest orgazm nie tylko fizyczny, ale i mentalny: spotkanie ze sobą bez masek.</p>
-          <p class="muted" style="margin-top:.6rem">✺ Liliths Temple — przestrzeń, w której uczymy się czynić z każdej chwili sztukę obecności.</p>
-        </div>
+    <!-- ===================== Manifest — Liliths Temple ===================== -->
+<section id="manifest" class="manifest-section">
+  <style>
+    .manifest-section{
+      --bg:#0b0a0a;
+      --ink:#f5f1ee;
+      --muted:#c7b6a9;
+      --accent:#7c1f2b;   /* burgund */
+      --accent-2:#4b1750; /* głęboki fiolet */
+      background:
+        radial-gradient(1200px 400px at 70% -10%, rgba(124,31,43,.25), transparent 60%),
+        radial-gradient(900px 300px at 20% 110%, rgba(75,23,80,.25), transparent 60%),
+        var(--bg);
+      color:var(--ink);
+      padding: clamp(3rem, 6vw, 6rem) 1.25rem;
+      position: relative;
+      overflow: clip;
+    }
+    .manifest-wrap{
+      max-width: 960px; margin: 0 auto;
+    }
+    .kicker{
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:var(--muted);
+      font-size:.82rem;
+      margin-bottom:.75rem;
+    }
+    .manifest-title{
+      font-size:clamp(1.9rem, 4vw, 3rem);
+      line-height:1.1;
+      font-weight:700;
+      margin:0 0 1rem 0;
+      background: linear-gradient(90deg,var(--ink), #e7d9ff 40%, #ffdce2 80%);
+      -webkit-background-clip:text; background-clip:text; color:transparent;
+    }
+    .sub{
+      color:var(--muted);
+      margin:0 0 2rem 0;
+      font-size:clamp(1rem,1.6vw,1.125rem);
+    }
+    .divider{
+      width:96px; height:2px; background:
+        linear-gradient(90deg,transparent, var(--accent), var(--accent-2), transparent);
+      margin: 1.25rem 0 2.25rem 0;
+      border-radius:999px;
+    }
+    .manifest-grid{
+      display:grid; gap:1.25rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width:900px){
+      .manifest-grid{ grid-template-columns: .9fr 1.1fr; gap:2rem; }
+    }
+    .lead{
+      font-size:clamp(1.05rem,1.8vw,1.25rem);
+      line-height:1.6;
+    }
+    .lead strong{
+      color:#fff; font-weight:800;
+    }
+    blockquote{
+      margin:0; padding:1rem 1.25rem;
+      border-left:3px solid color-mix(in oklab, var(--accent) 65%, #fff 35%);
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
+      border-radius:.5rem;
+      font-size:clamp(1rem,1.6vw,1.125rem);
+      line-height:1.6;
+    }
+    blockquote p{ margin:.25rem 0; }
+    blockquote footer{
+      margin-top:.5rem; font-size:.9rem; color:var(--muted);
+    }
+    .pill{
+      display:inline-block; font-size:.78rem; letter-spacing:.08em;
+      text-transform:uppercase; color:#fff; background:
+      linear-gradient(90deg,var(--accent),var(--accent-2));
+      padding:.4rem .75rem; border-radius:999px; margin-top:1rem;
+    }
+    .list{
+      list-style:none; padding:0; margin:0; display:grid; gap:.75rem;
+    }
+    .list li{
+      display:grid; grid-template-columns:auto 1fr; gap:.75rem; align-items:start;
+      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));
+      border:1px solid rgba(255,255,255,.06); border-radius:.75rem; padding:.9rem 1rem;
+    }
+    .badge{
+      width:26px; height:26px; display:grid; place-items:center; border-radius:999px;
+      background: radial-gradient(circle at 30% 30%, #ffdce2, #b48ad8 60%, #7c1f2b);
+      font-size:.9rem; font-weight:800; color:#0b0a0a;
+    }
+    .list b{ font-weight:800; color:#fff; }
+    .fine{
+      margin-top:1.5rem; color:var(--muted); font-size:.9rem; line-height:1.5;
+    }
+    .quote-em{
+      font-weight:800; color:#fff;
+    }
+  </style>
+
+  <div class="manifest-wrap">
+    <p class="kicker">Liliths Temple · Touch of Awakening</p>
+    <h2 class="manifest-title">Manifest Świątyni Dotyku</h2>
+    <p class="sub">To jest <strong>autorska</strong> praktyka Lilith — synteza doświadczeń, wrażliwości i badań nad ciałem, umysłem i energią. Nie „teoria”, lecz <em>doświadczenie</em>.</p>
+    <div class="divider" aria-hidden="true"></div>
+
+    <div class="manifest-grid">
+      <!-- Kolumna 1: wprowadzenie + cytaty -->
+      <div>
+        <p class="lead">
+          <strong>Ciało jest świątynią.</strong> Oddech — bramą. Obecność — mistrzem ceremonii.
+          Dotyk może być <strong>modlitwą</strong>, a przyjemność — <strong>lekarstwem</strong>.
+        </p>
+
+        <blockquote>
+          <p><span class="quote-em">„Dotyk, który porusza.”</span> Porusza mięśnie, oddech i to, co dawno zamilkło — abyś mógł/mogła usłyszeć siebie na nowo.</p>
+          <footer>— Lilith</footer>
+        </blockquote>
+
+        <blockquote>
+          <p><span class="quote-em">„Wejdź do Świątyni,</span> gdzie nic nie trzeba udowadniać. Tu <strong>łagodność</strong> i <strong>granice</strong> współtworzą bezpieczeństwo, a głębia wydarza się naturalnie.”</p>
+          <footer>— Lilith</footer>
+        </blockquote>
+
+        <p class="pill">Tantra z Lilith — moja interpretacja</p>
+        <p class="fine">„Tantra z Lilith” oznacza moją <strong>autorską</strong> interpretację praktyk pracy z ciałem i energią, wypracowaną przez lata doświadczeń. To nie akademicka definicja tantry — to <em>żywa droga</em> obecności, uważności i dotyku.</p>
       </div>
-    </section>
+
+      <!-- Kolumna 2: zasady manifestu -->
+      <div>
+        <ul class="list">
+          <li>
+            <span class="badge">1</span>
+            <div><b>Obecność ponad techniką.</b><br/>Techniki są narzędziem; <strong>obecność</strong> jest sztuką. W Świątyni liczy się to, co <em>czujesz</em>, gdy wszystko inne cichnie.</div>
+          </li>
+          <li>
+            <span class="badge">2</span>
+            <div><b>Granice są święte.</b><br/>Każda sesja to dialog. <strong>Twoje „tak” i „nie”</strong> są kompasem — prowadzimy się nimi bez kompromisów.</div>
+          </li>
+          <li>
+            <span class="badge">3</span>
+            <div><b>Przyjemność jako lekarstwo.</b><br/>Zamiast walki z ciałem — <strong>sojusz</strong>. Pieszczone napięcia zaczynają się <em>rozplątywać</em>.</div>
+          </li>
+          <li>
+            <span class="badge">4</span>
+            <div><b>Powolność przyspiesza.</b><br/>Kiedy zwalniasz, <strong>wracasz do siebie</strong>. To, co głębokie, nie znosi pośpiechu.</div>
+          </li>
+          <li>
+            <span class="badge">5</span>
+            <div><b>Integracja.</b><br/>Ciało–Umysł–Dusza — jedno kontinuum. Każda sesja domyka się <strong>oddechem</strong> i <strong>ciszą</strong>, aby doświadczenie mogło się zakorzenić.</div>
+          </li>
+        </ul>
+
+        <blockquote style="margin-top:1rem">
+          <p><span class="quote-em">„Nie wykluczam niczego,</span> co służy życiu.” Z troską i klarownością prowadzę Cię do miejsc, w których możesz na nowo zamieszkać w swoim ciele.</p>
+          <footer>— Lilith</footer>
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <blockquote>
+      <p><span class="quote-em">„Touch of Awakening.”</span> Przebudzenie nie spada z nieba — rodzi się z <strong>konsekwentnej czułości</strong> wobec siebie.</p>
+      <footer>— Liliths Temple</footer>
+    </blockquote>
+
+    <p class="fine">
+      © Liliths Temple. Teksty są chronione prawem autorskim. <strong>Kopiowanie i użycie wyłącznie za zgodą.</strong>
+    </p>
+  </div>
+</section>
+<!-- ===================== /Manifest — Liliths Temple ===================== --
 
     <!-- Filozofia Tantry -->
     <section id="filozofia">
